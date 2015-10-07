@@ -17,6 +17,69 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    NSString *pListPath = [[NSBundle mainBundle] pathForResource:@"books" ofType:@"plist"];
+
+    NSData * plistData = [[NSFileManager defaultManager] contentsAtPath:pListPath];
+
+    NSError *error;
+    NSArray *books = [NSPropertyListSerialization propertyListWithData:plistData options:NSPropertyListImmutable format:nil error:&error];
+
+    if (books) {
+
+        NSDictionary *book = [books firstObject];
+
+        NSString *title = book[@"Title"];
+        NSNumber *pageCount = book[@"Page Count"];
+
+        NSDate *pubDate = book[@"Publication Date"];
+
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+
+        [dateFormatter setDateFormat:@"MMM d, yyyy"];
+
+        NSNumber *isAwesome = book[@"Is Awesome"];
+
+        NSData *thumbNailData = book[@"ThumbNail"];
+
+        UIImage * thumbNail = [UIImage imageWithData:thumbNailData];
+
+        NSLog(@"%@", title);
+        NSLog(@"%@", pageCount);
+        NSLog(@"%@", pubDate);
+
+
+
+        NSMutableDictionary *anotherBook = [[NSMutableDictionary alloc] init];
+
+        NSError *anotherError;
+
+        anotherBook[@"Title"] = @"Earning Medals";
+        anotherBook[@"Publication Date"] = pubDate;
+        anotherBook[@"Page Count"] = @(198);
+        UIImage *image = [UIImage imageNamed:@"silverSocial"];
+        anotherBook[@"ThumbNail"] = UIImagePNGRepresentation(image);
+        NSArray *morebooks = @[book, anotherBook];
+
+        NSData *serializedData = [NSPropertyListSerialization dataWithPropertyList:morebooks format:NSPropertyListXMLFormat_v1_0 options:0 error:&error];
+
+
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        NSURL *documents = [fileManager URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:&anotherError];
+
+        documents = [documents URLByAppendingPathComponent:@"more_books.plist"];
+        BOOL success = [serializedData writeToURL:documents atomically:YES];
+
+        if (success) {
+            NSLog(@"Wrote to disk");
+
+        }else{
+            NSLog(@"baddd");
+        }
+
+
+    }
+
     return YES;
 }
 

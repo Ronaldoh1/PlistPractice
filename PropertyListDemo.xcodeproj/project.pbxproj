@@ -13,6 +13,9 @@
 		F2A91E511BC2518C00A7A0C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A91E4F1BC2518C00A7A0C2 /* Main.storyboard */; };
 		F2A91E531BC2518C00A7A0C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2A91E521BC2518C00A7A0C2 /* Assets.xcassets */; };
 		F2A91E561BC2518C00A7A0C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2A91E541BC2518C00A7A0C2 /* LaunchScreen.storyboard */; };
+		F2A91E5E1BC251E000A7A0C2 /* books.plist in Resources */ = {isa = PBXBuildFile; fileRef = F2A91E5D1BC251E000A7A0C2 /* books.plist */; settings = {ASSET_TAGS = (); }; };
+		F2A91E601BC2538F00A7A0C2 /* socialGold.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A91E5F1BC2538F00A7A0C2 /* socialGold.png */; settings = {ASSET_TAGS = (); }; };
+		F2A91E621BC264E200A7A0C2 /* silverSocial.png in Resources */ = {isa = PBXBuildFile; fileRef = F2A91E611BC264E200A7A0C2 /* silverSocial.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		F2A91E521BC2518C00A7A0C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F2A91E551BC2518C00A7A0C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F2A91E571BC2518C00A7A0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2A91E5D1BC251E000A7A0C2 /* books.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = books.plist; sourceTree = "<group>"; };
+		F2A91E5F1BC2538F00A7A0C2 /* socialGold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = socialGold.png; sourceTree = "<group>"; };
+		F2A91E611BC264E200A7A0C2 /* silverSocial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silverSocial.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,11 @@
 				F2A91E4D1BC2518C00A7A0C2 /* ViewController.m */,
 				F2A91E4F1BC2518C00A7A0C2 /* Main.storyboard */,
 				F2A91E521BC2518C00A7A0C2 /* Assets.xcassets */,
+				F2A91E5F1BC2538F00A7A0C2 /* socialGold.png */,
+				F2A91E611BC264E200A7A0C2 /* silverSocial.png */,
 				F2A91E541BC2518C00A7A0C2 /* LaunchScreen.storyboard */,
 				F2A91E571BC2518C00A7A0C2 /* Info.plist */,
+				F2A91E5D1BC251E000A7A0C2 /* books.plist */,
 				F2A91E461BC2518C00A7A0C2 /* Supporting Files */,
 			);
 			path = PropertyListDemo;
@@ -139,6 +148,9 @@
 				F2A91E561BC2518C00A7A0C2 /* LaunchScreen.storyboard in Resources */,
 				F2A91E531BC2518C00A7A0C2 /* Assets.xcassets in Resources */,
 				F2A91E511BC2518C00A7A0C2 /* Main.storyboard in Resources */,
+				F2A91E621BC264E200A7A0C2 /* silverSocial.png in Resources */,
+				F2A91E601BC2538F00A7A0C2 /* socialGold.png in Resources */,
+				F2A91E5E1BC251E000A7A0C2 /* books.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
